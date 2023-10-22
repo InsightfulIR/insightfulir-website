@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Navbar from "../components/nav/Navbar";
+import Navbar from "../components/page-sections/shared/nav-bar/Navbar";
 
 const PricingPage: React.FC = () => {
   return (

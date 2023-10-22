@@ -3,8 +3,7 @@ import { Link } from 'gatsby'
 import { Container, Navbar as BsNavbar, Nav } from 'react-bootstrap';
 import { StaticImage } from 'gatsby-plugin-image';
 
-// import Logo from '@/components/Logo';
-import GetStartedButton from '../buttons/GetStartedButton';
+import GetStartedButton from '../../../buttons/GetStartedButton';
 
 
 const Navbar: React.FC = () => {
@@ -15,7 +14,7 @@ const Navbar: React.FC = () => {
         <BsNavbar.Brand className="me-auto">
           <Link to='/'>
             <StaticImage
-              src="../../images/Insightful-IR-Web-Logo.png"
+              src="../../../../images/Insightful-IR-Web-Logo.png"
               alt="Insightful IR Logo"
               className="img-fluid"
               width={151}

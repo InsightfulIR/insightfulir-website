@@ -11,7 +11,7 @@ import {
   headline,
   subHeading,
 } from "./HeroSection.module.scss";
-import GetStartedButton from '../buttons/GetStartedButton';
+import GetStartedButton from '../../../buttons/GetStartedButton';
 
 
 const HeroSection: React.FC = () => {
@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
           </Col>
           <Col xs="12" md="6" className={imageColumn}>
             <StaticImage className={heroImage}
-              src="../../images/Insightful-IR-Hero-Image.png"
+              src="../../../../images/Insightful-IR-Hero-Image.png"
               alt="Insightful IR Hero Image"
               />
           </Col>
