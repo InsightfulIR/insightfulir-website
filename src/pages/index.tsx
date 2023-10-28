@@ -1,37 +1,29 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import Container from "react-bootstrap/Container";
+import PageLayout from "../components/page-layout/PageLayout";
 import BenefitsSection from "../components/page-sections/homepage/benefits-section/BenefitsSection";
 import CTASection from "../components/page-sections/shared/cta-section/CTASection";
 import FAQSection from "../components/page-sections/homepage/faq-section/FAQSection";
-import Footer from "../components/page-sections/shared/footer/Footer";
 import HeroSection from "../components/page-sections/homepage/hero-section/HeroSection";
 import HowItWorksSection from "../components/page-sections/homepage/how-it-works-section/HowItWorksSection";
 import InfoSection from "../components/page-sections/homepage/info-section/InfoSection";
-import Navbar from "../components/page-sections/shared/nav-bar/Navbar";
 import PopularStocksSection from "../components/page-sections/homepage/popular-stocks/PopularStocksSection";
 import SectionDivider from "../components/page-sections/shared/section-divider/SectionDivider";
 
 
 const HomePage: React.FC<PageProps> = () => {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Container fluid>
-          <HeroSection />
-          <InfoSection />
-          <SectionDivider />
-          <BenefitsSection />
-          <PopularStocksSection />
-          <SectionDivider />
-          <HowItWorksSection />
-          <FAQSection />
-          <CTASection />
-        </Container>
-      </main>
-      <Footer />
-    </>
+    <PageLayout>
+      <HeroSection />
+      <InfoSection />
+      <SectionDivider />
+      <BenefitsSection />
+      <PopularStocksSection />
+      <SectionDivider />
+      <HowItWorksSection />
+      <FAQSection />
+      <CTASection />
+    </PageLayout>
   )
 };
 
