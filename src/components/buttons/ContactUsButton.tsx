@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { navigate } from 'gatsby';
 import Button from "./Button";
 
 
 const ContactUsButton = () => {
 
   const handleClick = () => {
-    console.log('click');
+    navigate('/contact');
   };
 
   return (

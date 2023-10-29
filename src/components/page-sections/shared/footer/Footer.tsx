@@ -23,19 +23,27 @@ const Footer: React.FC = () => {
         </Col>
         <Col>
           <h2>Company</h2>
-          <ul>
-            <li>Pricing</li>
-            <li>Contact</li>
-          </ul>
+          <div>
+            <Link to="/pricing">Pricing</Link>
+          </div>
+          <div>
+            <Link to="/contact">Contact</Link>
+          </div>
         </Col>
         <Col>
           <h2>Fine Print</h2>
-          <ul>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
-            <li>Cookies Policy</li>
-            <li>Disclaimer</li>
-          </ul>
+          <div>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+          </div>
+          <div>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
+          </div>
+          <div>
+            <Link to="/cookies-policy">Cookies Policy</Link>
+          </div>
+          <div>
+            <Link to="/disclaimer">Disclaimer</Link>
+          </div>
         </Col>
         <Col>
           <h2>Follow Us</h2>
