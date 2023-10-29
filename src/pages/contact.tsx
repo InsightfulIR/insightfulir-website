@@ -1,12 +1,19 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/page-layout/PageLayout";
+import ContactHeaderSection from "../components/page-sections/contact/contact-header-section/ContactHeaderSection";
+import SendMessageSection from "../components/page-sections/contact/send-message-section/SendMessageSection";
+import KeepInTouchSection from "../components/page-sections/contact/keep-in-touch-section/KeepInTouchSection";
+import SectionDivider from "../components/page-sections/shared/section-divider/SectionDivider";
 
 
 const ContactPage: React.FC<PageProps> = () => {
   return (
     <PageLayout>
-      <h1>Contact Page</h1>
+      <ContactHeaderSection />
+      <SendMessageSection />
+      <SectionDivider />
+      <KeepInTouchSection />
     </PageLayout>
   );
 };
