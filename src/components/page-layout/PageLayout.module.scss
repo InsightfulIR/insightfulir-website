@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+header {
+  position: relative;
+  z-index: 50;
+}
+
+.navContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.mainContainer {
+  padding-top: 100px;
+  // padding-left: 30px;
+  // padding-right: 30px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .mainContainer {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .mainContainer {
+    padding-top: 175px;
+  }
+}

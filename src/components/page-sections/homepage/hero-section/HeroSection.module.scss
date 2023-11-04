@@ -1,33 +1,40 @@
+@import '../../../../styles/variables.scss';
+
 .heroSection {
-  padding-top: 165px;
-  padding-bottom: 165px;
-  /* background-color: blue; */
+  padding-top: 0px;
+  padding-bottom: 75px;
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 .row {
   align-items: center;
+  // gap: 30px;
 }
 
 .headlineColumn {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
+
 }
 
 .headline {
-  color: rgb(var(--primary-color-rgb));
-  font-weight: 700;
   font-size: 38px;
   margin-bottom: 20px;
 }
 
 .subHeading {
-  font-weight: 500;
-  font-size: 16px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: $breakpoint-md) {
+  .heroSection {
+    padding-bottom: 100px;
+  }
   .headline {
     font-size: 46px;
     margin-bottom: 25px;
@@ -38,14 +45,27 @@
   }
 }
 
-@media (min-width: 992px){
+@media (min-width: $breakpoint-lg){
+  .heroSection {
+    padding-top: 50px;
+    padding-bottom: 165px;
+  }
+  .headlineColumn {
+    // justify-content: start;
+  }
   .headline {
     font-size: 48px;
+    text-align: start;
   }
   .subHeading {
     font-size: 20px;
+    text-align: start;
+  }
+  .buttonContainer {
+    justify-content: start;
   }
 }
+
 
 .imageColumn {
 

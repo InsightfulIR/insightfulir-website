@@ -1,5 +1,8 @@
 import * as React from 'react';
+import classNames from 'classnames';
 import BsButton from 'react-bootstrap/Button';
+import { button } from './Button.module.scss';
+
 
 interface ButtonProps {
   value: string;
@@ -25,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <BsButton variant={variant}
               type={type}
-              className={className}
+              className={classNames(button, className)}
               size={size}
               value={value}
               onClick={onClick}>

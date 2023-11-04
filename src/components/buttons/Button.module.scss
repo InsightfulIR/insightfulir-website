@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.button {
+  min-height: 40px;
+  padding: 5px 20px;
+  border-radius: 25px;
+}
+
+.button:hover {
+  background-color: $color-primary-dark;
+}

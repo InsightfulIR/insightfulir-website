@@ -11,9 +11,7 @@ const IconCard: React.FC<Props> = ({ iconName, title, description }) => (
         <div className="icon-card__icon">
             {iconName}
         </div>
-        <div className="icon-card__title">
-            {title}
-        </div>
+        <h3>{title}</h3>
         <div className="icon-card__description">
             {description}
         </div>

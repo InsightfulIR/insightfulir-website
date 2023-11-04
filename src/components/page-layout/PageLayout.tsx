@@ -4,21 +4,31 @@ import Container from 'react-bootstrap/Container';
 import Copywrite from '../page-sections/shared/copywrite/Copywrite';
 import Footer from '../page-sections/shared/footer/Footer';
 import Navbar from '../page-sections/shared/nav-bar/Navbar';
-
+import {
+  mainContainer,
+  navContainer,
+  pageContainer,
+} from './PageLayout.module.scss';
 
 
 const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <>
-      <Navbar />
+    <div className={pageContainer}>
+      <header>
+        <div className={navContainer}>
+          <Navbar />
+        </div>
+      </header>
       <main>
-        <Container fluid>
+        <Container className={mainContainer}>
           {children}
         </Container>
       </main>
-      <Footer />
-      <Copywrite />
-    </>
+      <footer>
+        <Footer />
+        <Copywrite />
+      </footer>
+    </div>
   );
 };
 
