@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PopularStocksCard from './PopularStocksCard';
@@ -14,7 +15,7 @@ const popularStocks = [
 
 const PopularStocksSection: React.FC = () => {
   return (
-    <div>
+    <Container fluid>
       <h2>Explore Our Popular Stocks</h2>
       <Row>
         {popularStocks.map((stock) => (
@@ -27,7 +28,7 @@ const PopularStocksSection: React.FC = () => {
           </Col>
         ))}
       </Row>
-    </div>
+    </Container>
   );
 };
 

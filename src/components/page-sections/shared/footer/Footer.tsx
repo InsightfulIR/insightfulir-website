@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
 const Footer: React.FC = () => {
   return (
-    <div>
+    <Container fluid>
       <Row>
         <Col>
           <Link to='/'>
@@ -56,7 +57,7 @@ const Footer: React.FC = () => {
           </ul>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 

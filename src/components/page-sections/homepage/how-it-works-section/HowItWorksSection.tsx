@@ -1,6 +1,9 @@
 import * as React from 'react';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import { container } from './HowItWorksSection.module.scss';
 
 const howItWorks = [
   {
@@ -23,7 +26,7 @@ const howItWorks = [
 
 const HowItWorksSection: React.FC = () => {
   return (
-    <div>
+    <Container fluid className={container}>
       <h2>How Insightful IR Works</h2>
       <Row>
         {howItWorks.map(step => (
@@ -35,7 +38,7 @@ const HowItWorksSection: React.FC = () => {
           </Col>
         ))}
       </Row>
-    </div>
+    </Container>
   );
 };
 

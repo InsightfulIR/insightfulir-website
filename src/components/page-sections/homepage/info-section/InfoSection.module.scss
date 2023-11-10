@@ -1,0 +1,49 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  background-color: $color-background-white;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.content {
+  width: 100%;
+}
+
+.headline {
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 17px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  .content {
+    width: 900px;
+  }
+  .headline {
+    margin-bottom: 20px;
+  }
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    padding-top: 175px;
+  }
+  .headline {
+    margin-bottom: 25px;
+  }
+  .description {
+    font-size: 20px;
+  }
+}

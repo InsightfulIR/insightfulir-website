@@ -1,0 +1,11 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.divider {
+  width: 25%;
+  border-top: 1px solid $color-primary;
+}

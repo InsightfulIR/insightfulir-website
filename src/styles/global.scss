@@ -10,8 +10,7 @@ body {
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   background-color: $color-background;
-  max-width: 1400px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
@@ -24,6 +23,7 @@ h1 {
 
 h2 {
   color: $color-text;
+  text-align: center;
   font-size: 32px;
   font-weight: 700;
 }

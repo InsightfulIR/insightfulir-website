@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -35,7 +36,7 @@ const faqs = [
 
 const FAQSection: React.FC = () => {
   return (
-    <div>
+    <Container fluid>
       <Row>
         <Col xs="12" md="6">
           <h2>Frequently Asked Questions</h2>
@@ -49,7 +50,7 @@ const FAQSection: React.FC = () => {
           ))}
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 
