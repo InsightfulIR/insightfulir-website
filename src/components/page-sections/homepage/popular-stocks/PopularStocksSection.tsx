@@ -3,27 +3,28 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PopularStocksCard from './PopularStocksCard';
+import { container, heading } from './PopularStocks.module.scss';
 
 const popularStocks = [
-  {'symbol': 'AAPL', 'name': 'Apple', 'logo': 'https://logo.clearbit.com/apple.com'},
-  {'symbol': 'MSFT', 'name': 'Microsoft', 'logo': 'https://logo.clearbit.com/microsoft.com'},
-  {'symbol': 'AMZN', 'name': 'Amazon', 'logo': 'https://logo.clearbit.com/amazon.com'},
-  {'symbol': 'NFLX', 'name': 'Netflix', 'logo': 'https://logo.clearbit.com/netflix.com'},
-  {'symbol': 'TSLA', 'name': 'Tesla', 'logo': 'https://logo.clearbit.com/tesla.com'},
-  {'symbol': 'NVDA', 'name': 'Nvidia', 'logo': 'https://logo.clearbit.com/nvidia.com'},
+  {'symbol': 'AAPL', 'name': 'Apple', 'logoUrl': 'https://storage.googleapis.com/iexcloud-hl37opg/api/logos/AAPL.png'},
+  {'symbol': 'MSFT', 'name': 'Microsoft', 'logoUrl': 'https://storage.googleapis.com/iexcloud-hl37opg/api/logos/MSFT.png'},
+  {'symbol': 'AMZN', 'name': 'Amazon', 'logoUrl': 'https://storage.googleapis.com/iexcloud-hl37opg/api/logos/AMZN.png'},
+  {'symbol': 'NFLX', 'name': 'Netflix', 'logoUrl': 'https://storage.googleapis.com/iexcloud-hl37opg/api/logos/NFLX.png'},
+  {'symbol': 'TSLA', 'name': 'Tesla', 'logoUrl': 'https://storage.googleapis.com/iexcloud-hl37opg/api/logos/TSLA.png'},
+  {'symbol': 'NVDA', 'name': 'Nvidia', 'logoUrl': 'https://storage.googleapis.com/iexcloud-hl37opg/api/logos/NVDA.png'},
 ];
 
 const PopularStocksSection: React.FC = () => {
   return (
-    <Container fluid>
-      <h2>Explore Our Popular Stocks</h2>
+    <Container fluid className={container}>
+      <h2 className={heading}>Explore Our Popular Stocks</h2>
       <Row>
-        {popularStocks.map((stock) => (
+        {popularStocks.map(({logoUrl, name, symbol}) => (
           <Col xs="12" md="6" lg="4">
             <PopularStocksCard
-              logo={stock.logo}
-              name={stock.name}
-              symbol={stock.symbol}
+              logoUrl={logoUrl}
+              name={name}
+              symbol={symbol}
             />
           </Col>
         ))}

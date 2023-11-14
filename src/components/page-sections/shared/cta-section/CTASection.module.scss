@@ -1,0 +1,29 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
