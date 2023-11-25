@@ -3,14 +3,18 @@ import { navigate } from 'gatsby';
 import Button from "./Button";
 
 
-const ContactUsButton = () => {
+type Props = {
+  className?: string;
+}
+
+const ContactUsButton: React.FC<Props> = ({ className }) => {
 
   const handleClick = () => {
     navigate('/contact');
   };
 
   return (
-    <Button value="hi" handleClick={handleClick}>
+    <Button value="hi" className={className} handleClick={handleClick}>
       Contact Us
     </Button>
   );

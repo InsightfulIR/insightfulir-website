@@ -1,0 +1,64 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  height: 100%;
+  border-color: $color-primary;
+  border-width: 1px;
+  border-radius: 12px;
+  padding: 40px 15px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: $color-primary;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: $color-primary;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.featuresContainer {
+  margin-bottom: 30px;
+  color: $color-primary
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding: 40px 20px;
+    max-width: 360px;
+  }
+
+  .heading {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    padding: 40px;
+  }
+
+  .heading {
+    margin-bottom: 16px;
+  }
+
+  .priceContainer {
+    margin-bottom: 20px;
+  }
+}

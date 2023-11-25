@@ -1,7 +1,10 @@
 import * as React from 'react';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PricingPlanCard from './PricingPlanCard';
+
+import { container, plansRow } from './PricingPlansSection.module.scss';
 
 const freePlanBenefits = [
   'Basic Fundamental Metrics',
@@ -23,18 +26,28 @@ const premiumPlanBenefits = [
 
 const PricingPlansSection: React.FC = () => {
   return (
-    <div>
-      <h1>Invest Smarter with the Right Plan</h1>
-      <p>Whether your just getting started or have been investing for years, we have a plan for you.</p>
-      <Row>
-        <Col xs={12} md={6}>
-          <PricingPlanCard planName="Basic" price="$0/forever" description="Just getting started? Start here to learn the fundamentals of investing – for free." benefits={freePlanBenefits} />
+    <Container fluid className={container}>
+      <Row className={plansRow}>
+        <Col xs={12} md="auto">
+          <PricingPlanCard
+            planName="Basic"
+            price="0"
+            priceFrequency="forever"
+            description="Just getting started? Start here to learn the fundamentals of investing – for free."
+            benefits={freePlanBenefits}
+          />
         </Col>
-        <Col xs={12} md={6}>
-          <PricingPlanCard planName="Premium" price="$4.99/month" description="Already know your way around a 10K? Go Premium to take your analysis to the next level." benefits={premiumPlanBenefits} />
+        <Col xs={12} md="auto">
+          <PricingPlanCard
+            planName="Premium"
+            price="4.99"
+            priceFrequency="month"
+            description="Already know your way around a 10K? Go Premium to take your analysis to the next level."
+            benefits={premiumPlanBenefits}
+          />
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 

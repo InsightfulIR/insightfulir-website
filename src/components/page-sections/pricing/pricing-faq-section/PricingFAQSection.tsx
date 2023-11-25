@@ -1,7 +1,15 @@
 import * as React from 'react';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ContactUsButton from '../../../buttons/ContactUsButton';
+import {
+  contactHeading,
+  contactSection,
+  container,
+  heading,
+  subheading,
+} from './PricingFAQSection.module.scss';
 
 const faqs = [
   {
@@ -24,11 +32,11 @@ const faqs = [
 
 const PricingFAQSection: React.FC = () => {
   return (
-    <div>
+    <Container fluid className={container}>
       <Row>
         <Col xs="12" md="6">
-          <h2>Have Pricing Questions?</h2>
-          <h3>We have answers.</h3>
+          <h2 className={heading}>Have Pricing Questions?</h2>
+          <h3 className={subheading}>We have answers.</h3>
         </Col>
         <Col xs="12" md="6">
           {faqs.map(faq => (
@@ -37,11 +45,13 @@ const PricingFAQSection: React.FC = () => {
               <p>{faq.answer}</p>
             </div>
           ))}
-          <h4>Something else on your mind?</h4>
-          <ContactUsButton />
+          <div className={contactSection}>
+            <h4 className={contactHeading}>Something else on your mind?</h4>
+            <ContactUsButton />
+          </div>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 

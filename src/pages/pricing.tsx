@@ -3,12 +3,14 @@ import type { HeadFC, PageProps } from "gatsby";
 import PageLayout from "../components/page-layout/PageLayout";
 import CTASection from "../components/page-sections/shared/cta-section/CTASection";
 import PricingFAQSection from "../components/page-sections/pricing/pricing-faq-section/PricingFAQSection";
+import PricingHeaderSection from "../components/page-sections/pricing/pricing-header-section/PricingHeaderSection";
 import PricingPlansSection from "../components/page-sections/pricing/pricing-plans-section/PricingPlansSection";
 
 
 const PricingPage: React.FC<PageProps> = () => {
   return (
     <PageLayout>
+      <PricingHeaderSection />
       <PricingPlansSection />
       <PricingFAQSection />
       <CTASection />
