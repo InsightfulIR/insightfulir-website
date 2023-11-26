@@ -1,0 +1,21 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  background-color: rgba(17, 21, 24, 0);
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.copywrite {
+  color: #6c737d;
+  font-size: 14px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

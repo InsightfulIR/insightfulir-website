@@ -1,0 +1,43 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  background-color: $color-background-white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid rgba(17, 21, 24, 0.1);
+  border-bottom: 1px solid rgba(17, 21, 24, 0.1);
+}
+
+.sectionTitle {
+  font-size: 16px;
+  text-align: center;
+}
+
+.sectionLink {
+  color: $color-text;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.sectionLink:hover {
+  color: $color-primary-dark;
+  cursor: pointer;
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .sectionTitle {
+    text-align: start;
+  }
+}
