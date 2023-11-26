@@ -5,9 +5,9 @@ import { button } from './Button.module.scss';
 
 
 interface ButtonProps {
-  value: string;
   children: string;
   handleClick: any;
+  value?: string;
   variant?: string;
   type?: any;
   className?: string;

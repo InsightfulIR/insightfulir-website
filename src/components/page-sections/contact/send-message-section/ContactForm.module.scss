@@ -1,0 +1,33 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  background-color: $color-white;
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.fieldLabel {
+  color: $color-text;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    width: 80%;
+    padding: 20px 25px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    padding: 20px 40px;
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../../../styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-primary;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.heading {
+  color: $color-white;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  color: $color-white;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: 75px;
+    padding-bottom: 100px;
+  }
+
+  .heading {
+    margin-bottom: 25px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  .subheading {
+    font-size: 22px;
+  }
+}
