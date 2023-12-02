@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal TypeScript Starter
+  Insightful IR - Website
 </h1>
 
 ## 🚀 Quick start
