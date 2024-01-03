@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import SectionBlock from '../../shared/section-block/SectionBlock';
 import PopularStocksCard from './PopularStocksCard';
 import { container, heading } from './PopularStocks.module.scss';
 
@@ -16,11 +16,11 @@ const popularStocks = [
 
 const PopularStocksSection: React.FC = () => {
   return (
-    <Container fluid className={container}>
+    <SectionBlock className={container}>
       <h2 className={heading}>Explore Our Popular Stocks</h2>
       <Row>
         {popularStocks.map(({logoUrl, name, symbol}) => (
-          <Col xs="12" md="6" lg="4">
+          <Col key={symbol} xs="12" md="6" lg="4">
             <PopularStocksCard
               logoUrl={logoUrl}
               name={name}
@@ -29,7 +29,7 @@ const PopularStocksSection: React.FC = () => {
           </Col>
         ))}
       </Row>
-    </Container>
+    </SectionBlock>
   );
 };
 

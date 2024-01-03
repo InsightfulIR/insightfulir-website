@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import SectionBlock from '../../shared/section-block/SectionBlock';
 import {
   container,
   header,
@@ -8,12 +9,12 @@ import {
 
 const PricingHeaderSection: React.FC = () => {
   return (
-    <div className={container}>
+    <SectionBlock className={container}>
       <h1 className={header}>Invest Smarter with the Right Plan</h1>
       <p className={subheading}>
         Whether your just getting started or have been investing for years, we have a plan for you.
       </p>
-    </div>
+    </SectionBlock>
   )
 };
 

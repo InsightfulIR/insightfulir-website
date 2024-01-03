@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import PricingPlanCard from './PricingPlanCard';
 
+import SectionBlock from '../../shared/section-block/SectionBlock';
+import PricingPlanCard from './PricingPlanCard';
 import { container, plansRow } from './PricingPlansSection.module.scss';
 
 const freePlanBenefits = [
@@ -26,7 +26,7 @@ const premiumPlanBenefits = [
 
 const PricingPlansSection: React.FC = () => {
   return (
-    <Container fluid className={container}>
+    <SectionBlock className={container}>
       <Row className={plansRow}>
         <Col xs={12} md="auto">
           <PricingPlanCard
@@ -47,7 +47,7 @@ const PricingPlansSection: React.FC = () => {
           />
         </Col>
       </Row>
-    </Container>
+    </SectionBlock>
   );
 };
 

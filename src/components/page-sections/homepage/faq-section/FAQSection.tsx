@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import SectionBlock from '../../shared/section-block/SectionBlock';
 
 const faqs = [
   {
@@ -36,21 +36,21 @@ const faqs = [
 
 const FAQSection: React.FC = () => {
   return (
-    <Container fluid>
+    <SectionBlock>
       <Row>
         <Col xs="12" md="6">
           <h2>Frequently Asked Questions</h2>
         </Col>
         <Col xs="12" md="6">
-          {faqs.map(faq => (
-            <div>
+          {faqs.map((faq, index) => (
+            <div key={index}>
               <h4>{faq.question}</h4>
               <p>{faq.answer}</p>
             </div>
           ))}
         </Col>
       </Row>
-    </Container>
+    </SectionBlock>
   );
 };
 

@@ -14,7 +14,7 @@ const ContactUsButton: React.FC<Props> = ({ className }) => {
   };
 
   return (
-    <Button value="hi" className={className} handleClick={handleClick}>
+    <Button className={className} handleClick={handleClick}>
       Contact Us
     </Button>
   );

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import SectionBlock from '../../shared/section-block/SectionBlock';
 import IconCard from '../../../icon-card/IconCard';
 import { container, title } from './BenefitsSection.module.scss';
 
@@ -41,11 +41,11 @@ const benefits = [
 
 const BenefitsSection: React.FC = () => {
   return (
-    <Container fluid className={container}>
+    <SectionBlock className={container}>
       <h2 className={title}>Why Insightful IR?</h2>
       <Row>
-        {benefits.map(benefit => (
-          <Col xs={12} md={6}>
+        {benefits.map((benefit, index) => (
+          <Col key={index} xs={12} md={6}>
             <IconCard
               iconName={benefit.iconName}
               title={benefit.title}
@@ -54,7 +54,7 @@ const BenefitsSection: React.FC = () => {
           </Col>
         ))}
       </Row>
-    </Container>
+    </SectionBlock>
   )
 }
 

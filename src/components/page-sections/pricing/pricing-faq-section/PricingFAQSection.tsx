@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ContactUsButton from '../../../buttons/ContactUsButton';
+import SectionBlock from '../../shared/section-block/SectionBlock';
 import {
   contactHeading,
   contactSection,
@@ -32,7 +32,7 @@ const faqs = [
 
 const PricingFAQSection: React.FC = () => {
   return (
-    <Container fluid className={container}>
+    <SectionBlock className={container}>
       <Row>
         <Col xs="12" md="6">
           <h2 className={heading}>Have Pricing Questions?</h2>
@@ -51,7 +51,7 @@ const PricingFAQSection: React.FC = () => {
           </div>
         </Col>
       </Row>
-    </Container>
+    </SectionBlock>
   );
 };
 

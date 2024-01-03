@@ -1,23 +1,25 @@
 import * as React from 'react';
-import { Row, Col, Container } from "react-bootstrap";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import SectionBlock from '../../shared/section-block/SectionBlock';
+import GetStartedButton from '../../../buttons/GetStartedButton';
 import {
   buttonContainer,
+  container,
   heroImage,
-  heroSection,
   imageColumn,
   row,
   headlineColumn,
   headline,
   subHeading,
 } from "./HeroSection.module.scss";
-import GetStartedButton from '../../../buttons/GetStartedButton';
 
 
 const HeroSection: React.FC = () => {
    return (
-    <Container fluid className={heroSection}>
+    <SectionBlock className={container}>
       <Row className={row}>
         <Col xs="12" lg="6" className={headlineColumn}>
           <h1 className={headline}>The Intuitive Stock Analysis App for Individual Investors</h1>
@@ -33,7 +35,7 @@ const HeroSection: React.FC = () => {
             />
         </Col>
       </Row>
-    </Container>
+    </SectionBlock>
    );
 };
 

@@ -7,6 +7,7 @@ import GetStartedButton from '../../../buttons/GetStartedButton';
 import {
   navbar,
   navbarContainer,
+  navLink,
 } from './Navbar.module.scss';
 
 
@@ -30,8 +31,8 @@ const Navbar: React.FC = () => {
           <BsNavbar.Toggle className="navbar-mobile-menu" aria-controls="navbarDropdown" />
           <BsNavbar.Collapse id="navbarDropdown" className="navbar-mobile-menu">
             <Nav className="ms-auto">
-              <Link to='/pricing' className='nav-link'>Pricing</Link>
-              <Link to='/contact' className='nav-link'>Contact</Link>
+              <Link to='/pricing' className={navLink}>Pricing</Link>
+              <Link to='/contact' className={navLink}>Contact</Link>
               <GetStartedButton />
             </Nav>
           </BsNavbar.Collapse>

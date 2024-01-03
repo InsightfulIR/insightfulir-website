@@ -1,4 +1,5 @@
 import * as React from 'react';
+import SectionBlock from '../../shared/section-block/SectionBlock';
 import {
   container,
   heading,
@@ -8,7 +9,7 @@ import {
 
 const KeepInTouchSection = () => {
   return (
-    <div className={container}>
+    <SectionBlock className={container}>
       <h2 className={heading}>Let's Keep In Touch</h2>
       <p className={subheading}>
         Don’t have a specific question but want to get to know us better – follow us on your favorite social media platforms.
@@ -20,7 +21,7 @@ const KeepInTouchSection = () => {
         <li>Tik Tok</li>
         <li>LinkedIn</li>
       </ul>
-    </div>
+    </SectionBlock>
   );
 };
 

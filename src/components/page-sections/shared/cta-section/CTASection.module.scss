@@ -8,6 +8,13 @@
   padding-bottom: 125px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   margin-bottom: 40px;
 }

@@ -2,14 +2,10 @@ import * as React from 'react';
 import Button from "./Button";
 
 
-const GetStartedButton = () => {
-
-  const handleClick = () => {
-    console.log('click');
-  };
+const GetStartedButton: React.FC = () => {
 
   return (
-    <Button value="hi" handleClick={handleClick}>
+    <Button href="https://app.getinsightfulir.com/auth/signup">
       Get Started
     </Button>
   );

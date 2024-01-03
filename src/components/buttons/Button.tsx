@@ -6,8 +6,9 @@ import { button } from './Button.module.scss';
 
 interface ButtonProps {
   children: string;
-  handleClick: any;
+  handleClick?: any;
   value?: string;
+  href?: string;
   variant?: string;
   type?: any;
   className?: string;
@@ -15,7 +16,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  value, children, handleClick, variant, type, size, className}
+  value, children, handleClick, href, variant, type, size, className}
 ) => {
 
   const onClick = (event: any) => {
@@ -27,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <BsButton variant={variant}
+              href={href}
               type={type}
               className={classNames(button, className)}
               size={size}

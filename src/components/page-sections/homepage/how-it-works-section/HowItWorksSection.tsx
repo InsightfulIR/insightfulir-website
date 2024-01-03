@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import SectionBlock from '../../shared/section-block/SectionBlock';
 
 import { container } from './HowItWorksSection.module.scss';
 
@@ -26,19 +26,19 @@ const howItWorks = [
 
 const HowItWorksSection: React.FC = () => {
   return (
-    <Container fluid className={container}>
+    <SectionBlock className={container}>
       <h2>How Insightful IR Works</h2>
       <Row>
-        {howItWorks.map(step => (
-          <Col xs={12} md={6}>
+        {howItWorks.map(({title, description}) => (
+          <Col key={title} xs={12} md={6}>
             <div>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
+              <h3>{title}</h3>
+              <p>{description}</p>
             </div>
           </Col>
         ))}
       </Row>
-    </Container>
+    </SectionBlock>
   );
 };
 
