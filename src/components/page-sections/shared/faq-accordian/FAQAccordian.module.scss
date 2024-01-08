@@ -1,0 +1,38 @@
+@import '../../../../styles/variables.scss';
+
+.questionContainer {
+  border: 0;
+  border-bottom: 1px solid $color-border;
+}
+
+.questionHeader {
+  border: 0;
+}
+
+.questionHeader button {
+  // background-color: green;
+  // padding: 20px;
+  // color: red;
+}
+
+.questionHeader button:not(.collapsed) {
+  // background-color: transparent;
+  // color: $color-primary;
+}
+
+.questionText {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.answerContainer {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .questionText {
+    font-size: 18px;
+  }
+}

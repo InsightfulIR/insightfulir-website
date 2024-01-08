@@ -4,4 +4,14 @@ $primary: $color-primary;
 
 // $card-border-radius: 1rem;
 
+$accordion-button-active-bg: transparent;
+$accordion-button-padding-x: 20px;
+$accordion-button-padding-y: 20px;
+$accordion-button-color: $color-text;
+$accordion-button-active-color: $color-primary;
+$accordion-border-width: 0px;
+$accordion-body-padding-y: 0px;
+$accordion-body-padding-x: 0px;
+$accordion-button-focus-box-shadow: 0;
+
 @import '~bootstrap/scss/bootstrap.scss';

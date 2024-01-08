@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

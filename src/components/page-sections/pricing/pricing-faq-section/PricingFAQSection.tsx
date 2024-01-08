@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import FAQAccordian from '../../shared/faq-accordian/FAQAccordian';
 import ContactUsButton from '../../../buttons/ContactUsButton';
 import SectionBlock from '../../shared/section-block/SectionBlock';
 import {
@@ -39,12 +40,7 @@ const PricingFAQSection: React.FC = () => {
           <h3 className={subheading}>We have answers.</h3>
         </Col>
         <Col xs="12" md="6">
-          {faqs.map(faq => (
-            <div>
-              <h4>{faq.question}</h4>
-              <p>{faq.answer}</p>
-            </div>
-          ))}
+          <FAQAccordian faqs={faqs} />
           <div className={contactSection}>
             <h4 className={contactHeading}>Something else on your mind?</h4>
             <ContactUsButton />

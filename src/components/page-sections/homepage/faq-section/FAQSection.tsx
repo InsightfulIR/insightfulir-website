@@ -1,7 +1,13 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SectionBlock from '../../shared/section-block/SectionBlock';
+import FAQAccordian from '../../shared/faq-accordian/FAQAccordian';
+import {
+  container,
+  title,
+} from './FAQSection.module.scss';
 
 const faqs = [
   {
@@ -10,7 +16,7 @@ const faqs = [
   },
   {
     'question': 'How much does Insightful IR cost?',
-    'answer': 'Insightful IR offers two pricing plans for its users. The first is a free plan, which provides access to basic tools and features. The second is a premium plan, which offers additional tools and features to enhance your stock analysis capabilities. Visit our pricing page to learn more.'
+    'answer': <>Insightful IR offers two pricing plans for its users. The first is a free plan, which provides access to basic tools and features. The second is a premium plan, which offers additional tools and features to enhance your stock analysis capabilities. Visit our <Link to="/pricing">pricing</Link> page to learn more.</>
   },
   {
     'question': 'What types of data does Insightful IR provide?',
@@ -36,18 +42,13 @@ const faqs = [
 
 const FAQSection: React.FC = () => {
   return (
-    <SectionBlock>
+    <SectionBlock className={container}>
       <Row>
-        <Col xs="12" md="6">
-          <h2>Frequently Asked Questions</h2>
+        <Col xs="12" md="4" lg="5">
+          <h2 className={title}>Frequently Asked Questions</h2>
         </Col>
-        <Col xs="12" md="6">
-          {faqs.map((faq, index) => (
-            <div key={index}>
-              <h4>{faq.question}</h4>
-              <p>{faq.answer}</p>
-            </div>
-          ))}
+        <Col xs="12" md="8" lg="7">
+          <FAQAccordian faqs={faqs} />
         </Col>
       </Row>
     </SectionBlock>
