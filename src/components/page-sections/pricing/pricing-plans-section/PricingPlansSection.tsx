@@ -44,6 +44,7 @@ const PricingPlansSection: React.FC = () => {
             priceFrequency="month"
             description="Already know your way around a 10K? Go Premium to take your analysis to the next level."
             benefits={premiumPlanBenefits}
+            isPremium
           />
         </Col>
       </Row>

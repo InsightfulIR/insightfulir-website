@@ -1,11 +1,15 @@
 import * as React from 'react';
-import Button from "./Button";
+import Button, { ButtonVariant } from "./Button";
+
+type Props = {
+  variant?: ButtonVariant;
+};
 
 
-const GetStartedButton: React.FC = () => {
+const GetStartedButton: React.FC<Props> = ({variant}) => {
 
   return (
-    <Button href="https://app.getinsightfulir.com/auth/signup">
+    <Button variant={variant} href="https://app.getinsightfulir.com/auth/signup">
       Get Started
     </Button>
   );

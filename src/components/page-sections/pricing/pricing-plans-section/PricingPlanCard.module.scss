@@ -17,14 +17,12 @@
   text-align: center;
   font-weight: 500;
   margin-bottom: 30px;
-  color: $color-primary;
 }
 
 .priceContainer {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-  color: $color-primary;
 }
 
 .buttonContainer {
@@ -62,3 +60,39 @@
     margin-bottom: 20px;
   }
 }
+
+@mixin themable($theme-name, $container-bg, $text-color, $button-bg) {
+  .#{$theme-name} {
+    height: 100%;
+
+    .container {
+      background-color: $container-bg;
+    }
+
+    .heading {
+      color: $text-color;
+    }
+
+    .subheading {
+      color: $text-color;
+    }
+
+    .priceContainer {
+      color: $text-color;
+    }
+
+    .featuresContainer {
+      color: $text-color;
+    }
+
+    .buttonContainer {
+      a {
+        background-color: $button-bg;
+      }
+
+    }
+  }
+}
+
+@include themable(basicTheme, $color-white, $color-primary, $color-primary);
+@include themable(premiumTheme, $color-primary, $color-white, $color-white);

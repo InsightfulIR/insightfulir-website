@@ -3,13 +3,14 @@ import classNames from 'classnames';
 import BsButton from 'react-bootstrap/Button';
 import { button } from './Button.module.scss';
 
+export type ButtonVariant = 'primary' | 'outline-primary';
 
 interface ButtonProps {
   children: string;
   handleClick?: any;
   value?: string;
   href?: string;
-  variant?: string;
+  variant?: ButtonVariant;
   type?: any;
   className?: string;
   size?: 'sm' | 'lg';
