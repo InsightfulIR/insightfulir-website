@@ -1,6 +1,9 @@
 @import '../../../../styles/variables.scss';
 
 .container {
+  background-image:
+    linear-gradient($color-background-primary-overlay, $color-background-primary-overlay),
+    url(../../../../images/background-overlav.webp);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +20,7 @@
 
 .title {
   margin-bottom: 40px;
+  color: $color-white;
 }
 
 @media (min-width: $breakpoint-md) {
