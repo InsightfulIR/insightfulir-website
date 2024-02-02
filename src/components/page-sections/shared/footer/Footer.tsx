@@ -5,10 +5,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import SocialIcon from '../../shared/social-icons/SocialIcon';
 import {
   container,
+  sectionItems,
   sectionLink,
   sectionTitle,
+  socialIconsContainer,
 } from './Footer.module.scss';
 
 const Footer: React.FC = () => {
@@ -29,37 +32,41 @@ const Footer: React.FC = () => {
         </Col>
         <Col xs={12} lg={3}>
           <h2 className={sectionTitle}>Company</h2>
-          <div>
-            <Link className={sectionLink} to="/pricing">Pricing</Link>
-          </div>
-          <div>
-            <Link className={sectionLink} to="/contact">Contact</Link>
+          <div className={sectionItems}>
+            <div>
+              <Link className={sectionLink} to="/pricing">Pricing</Link>
+            </div>
+            <div>
+              <Link className={sectionLink} to="/contact">Contact</Link>
+            </div>
           </div>
         </Col>
         <Col xs={12} lg={3}>
           <h2 className={sectionTitle}>Fine Print</h2>
-          <div>
-            <Link className={sectionLink} to="/privacy-policy">Privacy Policy</Link>
-          </div>
-          <div>
-            <Link className={sectionLink} to="/terms-and-conditions">Terms & Conditions</Link>
-          </div>
-          <div>
-            <Link className={sectionLink} to="/cookies-policy">Cookies Policy</Link>
-          </div>
-          <div>
-            <Link className={sectionLink} to="/disclaimer">Disclaimer</Link>
+          <div className={sectionItems}>
+            <div>
+              <Link className={sectionLink} to="/privacy-policy">Privacy Policy</Link>
+            </div>
+            <div>
+              <Link className={sectionLink} to="/terms-and-conditions">Terms & Conditions</Link>
+            </div>
+            <div>
+              <Link className={sectionLink} to="/cookies-policy">Cookies Policy</Link>
+            </div>
+            <div>
+              <Link className={sectionLink} to="/disclaimer">Disclaimer</Link>
+            </div>
           </div>
         </Col>
         <Col xs={12} lg={3}>
           <h2 className={sectionTitle}>Follow Us</h2>
-          <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
-            <li>Tik Tok</li>
-            <li>LinkedIn</li>
-          </ul>
+          <div className={socialIconsContainer}>
+            <SocialIcon platform="facebook" />
+            <SocialIcon platform="instagram" />
+            <SocialIcon platform="twitter" />
+            <SocialIcon platform="tiktok" />
+            <SocialIcon platform="linkedin" />
+          </div>
         </Col>
       </Row>
     </Container>

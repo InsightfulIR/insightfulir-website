@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.sectionItems {
+  text-align: center;
+}
+
 .sectionLink {
   color: $color-text;
   font-size: 18px;
@@ -22,6 +26,13 @@
 .sectionLink:hover {
   color: $color-primary-dark;
   cursor: pointer;
+}
+
+.socialIconsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
 }
 
 @media (min-width: $breakpoint-md) {
@@ -39,5 +50,13 @@
 
   .sectionTitle {
     text-align: start;
+  }
+
+  .sectionItems {
+    text-align: start;
+  }
+
+  .socialIconsContainer {
+    justify-content: flex-start;
   }
 }
