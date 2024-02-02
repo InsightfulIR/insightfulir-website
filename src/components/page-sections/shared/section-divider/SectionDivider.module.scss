@@ -1,11 +1,30 @@
 @import '../../../../styles/variables.scss';
 
 .container {
+  background-color: $color-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .divider {
-  width: 25%;
-  border-top: 1px solid $color-primary;
+  width: 33%;
+  border-top: 2px solid $color-text;
 }
+
+@mixin themable($theme-name, $container-bg, $divider-color) {
+  .#{$theme-name} {
+    .container {
+      background-color: $container-bg;
+    }
+
+    .divider {
+      border-top-color: $divider-color;
+    }
+  }
+}
+
+@include themable(bgWhiteTheme, $color-background-white, $color-text);
+@include themable(bgPrimaryTheme, $color-primary, $color-white);

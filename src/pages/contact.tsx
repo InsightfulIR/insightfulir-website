@@ -12,7 +12,7 @@ const ContactPage: React.FC<PageProps> = () => {
     <PageLayout>
       <ContactHeaderSection />
       <SendMessageSection />
-      <SectionDivider />
+      <SectionDivider bgColor="primary" />
       <KeepInTouchSection />
     </PageLayout>
   );

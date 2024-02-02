@@ -16,7 +16,7 @@ const HomePage: React.FC<PageProps> = () => {
     <PageLayout>
       <HeroSection />
       <InfoSection />
-      <SectionDivider />
+      <SectionDivider bgColor="white" />
       <BenefitsSection />
       <PopularStocksSection />
       <SectionDivider />
