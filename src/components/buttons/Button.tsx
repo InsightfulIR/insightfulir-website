@@ -14,11 +14,12 @@ interface ButtonProps {
   type?: any;
   className?: string;
   size?: 'sm' | 'lg';
+  isDisabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  value, children, handleClick, href, variant, type, size, className}
-) => {
+  value, children, handleClick, href, variant, type, size, className, isDisabled
+}) => {
 
   const onClick = (event: any) => {
     if(handleClick) {
@@ -29,6 +30,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <BsButton variant={variant}
+              disabled={isDisabled}
               href={href}
               type={type}
               className={classNames(button, className)}

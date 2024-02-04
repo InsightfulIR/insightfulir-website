@@ -1,8 +1,9 @@
 import * as React from 'react';
 import SectionBlock from '../../shared/section-block/SectionBlock';
-import ContactForm from './ContactForm';
+import ContactForm from './contact-form/ContactForm';
 import {
   container,
+  formContainer,
   heading,
   subheading,
 } from './SendMessageSection.module.scss';
@@ -15,7 +16,9 @@ const SendMessageSection = () => {
       <p className={subheading}>
         We’re here to help and answer any questions you might have. Fill out the form below to send us a message and we will get back to you soon.
       </p>
-      <ContactForm />
+      <div className={formContainer}>
+        <ContactForm />
+      </div>
     </SectionBlock>
   );
 };
