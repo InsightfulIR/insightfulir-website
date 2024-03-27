@@ -15,11 +15,13 @@ type Props = {
 
 const PopularStocksCard: React.FC<Props> = ({ logoUrl, name, symbol }) => {
   return (
-    <Card className={card}>
-      <img src={logoUrl} className={cardImage} alt={`${symbol} logo`} />
-      <h3 className={cardTitle}>{ symbol }</h3>
-      <p>{ name }</p>
-    </Card>
+    <a href={`https://app.getinsightfulir.com/${symbol}/overview`}>
+      <Card className={card}>
+        <img src={logoUrl} className={cardImage} alt={`${symbol} logo`} />
+        <h3 className={cardTitle}>{ symbol }</h3>
+        <p>{ name }</p>
+      </Card>
+    </a>
   );
 };
 
