@@ -42,7 +42,7 @@ const PricingPlanCard: React.FC<Props> = (
         </div>
         <p className={subheading}>{description}</p>
         <div className={buttonContainer}>
-          <GetStartedButton variant={buttonVariant} />
+          <GetStartedButton variant={buttonVariant} isPremium={isPremium} />
         </div>
         <ul className={featuresContainer}>
           {benefits.map(benefit => <li>{benefit}</li>)}
