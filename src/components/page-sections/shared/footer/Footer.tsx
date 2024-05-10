@@ -24,6 +24,7 @@ const Footer: React.FC = () => {
               src="../../../../images/Insightful-IR-Web-Logo.png"
               alt="Insightful IR Logo"
               className="img-fluid"
+              placeholder="none"
               width={151}
             />
           </Link>

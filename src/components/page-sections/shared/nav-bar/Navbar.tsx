@@ -22,6 +22,8 @@ const Navbar: React.FC = () => {
               <StaticImage
                 src="../../../../images/Insightful-IR-Web-Logo.png"
                 alt="Insightful IR Logo"
+                loading="eager"
+                placeholder="none"
                 className="img-fluid"
                 width={151}
               />

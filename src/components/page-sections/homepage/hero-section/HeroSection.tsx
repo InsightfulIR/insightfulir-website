@@ -32,6 +32,7 @@ const HeroSection: React.FC = () => {
           <StaticImage className={heroImage}
             src="../../../../images/Insightful-IR-Hero-Image.png"
             alt="Insightful IR Hero Image"
+            loading="eager"
             />
         </Col>
       </Row>
